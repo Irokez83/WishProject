@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
-namespace WishProject.Models
+namespace GiftService.Models
 {
+    public enum Occasionals { Birthday, Christmas, Anniversary, Valentines, Other }
     public class User
     {
         [Key]
@@ -16,5 +20,10 @@ namespace WishProject.Models
         //each user has a collection of preferences
         List<Preference> prefs { get; set; }
     }
+    public class UserContext : DbContext
+    {
 
+        public DbSet<User> Users { get; set; }
+        public DbSet<Preference> Preferences { get; set; }
+    }
 }
