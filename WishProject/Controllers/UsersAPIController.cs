@@ -8,21 +8,21 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using GiftService.Models;
+using WishProject.Models;
 
-namespace GiftService.Controllers
+namespace WishProject.Controllers
 {
-    public class UsersController : ApiController
+    public class UsersAPIController : ApiController
     {
-        private UserContext db = new UserContext();
+        private WishProjectContext db = new WishProjectContext();
 
-        // GET: api/Users
+        // GET: api/UsersAPI
         public IQueryable<User> GetUsers()
         {
             return db.Users;
         }
 
-        // GET: api/Users/5
+        // GET: api/UsersAPI/5
         [ResponseType(typeof(User))]
         public IHttpActionResult GetUser(int id)
         {
@@ -35,7 +35,7 @@ namespace GiftService.Controllers
             return Ok(user);
         }
 
-        // PUT: api/Users/5
+        // PUT: api/UsersAPI/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutUser(int id, User user)
         {
@@ -70,7 +70,7 @@ namespace GiftService.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Users
+        // POST: api/UsersAPI
         [ResponseType(typeof(User))]
         public IHttpActionResult PostUser(User user)
         {
@@ -85,7 +85,7 @@ namespace GiftService.Controllers
             return CreatedAtRoute("DefaultApi", new { id = user.UserId }, user);
         }
 
-        // DELETE: api/Users/5
+        // DELETE: api/UsersAPI/5
         [ResponseType(typeof(User))]
         public IHttpActionResult DeleteUser(int id)
         {
