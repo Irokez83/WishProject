@@ -16,16 +16,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                @Html.ActionLink("Home", "Index", "Users", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Create User", "Create", "Users")</li>
                     <li>@Html.ActionLink("User List", "Index", "Users")</li>
-                    <li>@Html.ActionLink("Add Preferences", "Create", "Preferences")</li>
+                    <li>@Html.ActionLink("Add Preference", "Create", "Preferences")</li>
                     <li>@Html.ActionLink("Preference List", "Index", "Preferences")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Our Project", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>
