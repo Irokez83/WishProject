@@ -22,7 +22,7 @@ namespace WishProject.Controllers
             return db.Users;
         }
 
-        // GET: api/UsersAPI/5
+        // GET: api/UsersAPI/5/this is 5
         [ResponseType(typeof(User))]
         public IHttpActionResult GetUser(int id)
         {
