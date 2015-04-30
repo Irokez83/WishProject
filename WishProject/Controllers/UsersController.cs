@@ -15,10 +15,11 @@ namespace WishProject.Controllers
     {
         private WishProjectContext db = new WishProjectContext();
 
-        // GET: Users
+        // Index is ResultList to return actual Users sorted in alphabetical order
         public async Task<ActionResult> Index()
         {
-            return View(await db.Users.ToListAsync());
+            var userList = db.Users.OrderBy(o => o.Email);
+            return View(await userList.ToListAsync());
         }
 
         // GET: Users/Details/5
