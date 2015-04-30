@@ -12,7 +12,7 @@ using WishProject.Models;
 
 namespace WishProject.Controllers
 {
-    public class UsersAPIController : ApiController
+    public class Users1APIController : ApiController
     {
         private WishProjectContext db = new WishProjectContext();
 
