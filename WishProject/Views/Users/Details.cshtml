@@ -4,23 +4,35 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<br>
 
-<div>
-    <h4>User</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+<h2>User @Html.DisplayFor(model => model.Email) details: </h2> 
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+    
+    @*<div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                    <h4> User:</h4>
+                </dt>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+            </dl>
+        </div>*@
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p>
+        @*@Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |*@
+        @Html.ActionLink("Back to User List", "Index")
+    </p>

@@ -13,5 +13,8 @@ namespace WishProject.Models
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Please provide valid E-mail address")]
         public string Email { get; set; }
+        //each user has a collection of preferences
+        List<Preference> prefs { get; set; }
     }
+
 }
