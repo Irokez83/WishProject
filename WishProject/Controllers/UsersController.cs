@@ -53,7 +53,7 @@ namespace WishProject.Controllers
             {
                 db.Users.Add(user);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index", "Preferences");
+                return RedirectToAction("Create", "Preferences");
             }
 
             return View(user);
